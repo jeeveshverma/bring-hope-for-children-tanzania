@@ -1,6 +1,7 @@
 // Bring Hope for Children Tanzania — site interactions
 (function () {
   var WHATSAPP_NUMBER = "255686119728";
+  var t = window.BHCT_T || function (s) { return s; };
 
   // Mobile menu
   var toggle = document.querySelector(".nav-toggle");
@@ -8,7 +9,7 @@
   toggle.addEventListener("click", function () {
     var open = menu.classList.toggle("open");
     toggle.setAttribute("aria-expanded", open);
-    toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    toggle.setAttribute("aria-label", t(open ? "Close menu" : "Open menu"));
   });
   menu.querySelectorAll("a").forEach(function (link) {
     link.addEventListener("click", function () {
@@ -71,7 +72,7 @@
       if (!ok && !firstBad) firstBad = el;
     });
     if (firstBad) {
-      note.textContent = "Please fill in your name, a valid email and a message.";
+      note.textContent = t("Please fill in your name, a valid email and a message.");
       firstBad.focus();
       return;
     }
@@ -90,8 +91,9 @@
     btn.addEventListener("click", function () {
       if (!navigator.clipboard) return;
       navigator.clipboard.writeText(btn.dataset.copy).then(function () {
-        btn.textContent = "Copied!";
-        setTimeout(function () { btn.textContent = "Copy"; }, 1800);
+        var label = btn.firstChild, before = label.nodeValue;
+        label.nodeValue = t("Copied!");
+        setTimeout(function () { label.nodeValue = before; }, 1800);
       });
     });
   });

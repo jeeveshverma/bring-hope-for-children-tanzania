@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jeeveshverma.github.io/bring-hope-for-children-tanzania/sitemap.xml
