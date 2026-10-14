@@ -2,6 +2,21 @@
    Bring Hope for Children Tanzania — styles
    Brand: navy blue + red (from logo), warm sun yellow accent
    ========================================================= */
+@font-face {
+  font-family: "Fraunces";
+  src: url("../fonts/fraunces-latin.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Nunito Sans";
+  src: url("../fonts/nunito-sans-latin.woff2") format("woff2");
+  font-weight: 200 1000;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --navy: #1f2a7a;
   --navy-dark: #141c56;
