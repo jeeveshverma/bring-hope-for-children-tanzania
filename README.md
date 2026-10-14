@@ -16,7 +16,10 @@ assets/img/           logo, favicon and photos
 ## Editing content
 - **Phone / WhatsApp:** search for `255686119728` in `index.html` and `assets/js/main.js`.
 - **Photos:** put new images in `assets/img/` and reference them in the Gallery section.
-- **Donation details:** edit the `#donate` section in `index.html`.
+- **Donation / bank details:** edit the `#donate` section in `index.html` (the copy button uses `data-copy`).
+- **Events:** update the `#events` section when a new campaign starts.
+
+Content and photos come from the organisation's public Instagram ([@bring_hope_for_children_tz](https://www.instagram.com/bring_hope_for_children_tz)) and Idealist listing.
 
 ## Custom domain
 Add a `CNAME` file containing the domain (e.g. `bringhopeforchildren.org`). Then point the domain's DNS at GitHub Pages:

@@ -85,5 +85,16 @@
     window.open("https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(text), "_blank", "noopener");
   });
 
+  // Copy bank account number
+  document.querySelectorAll("[data-copy]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      if (!navigator.clipboard) return;
+      navigator.clipboard.writeText(btn.dataset.copy).then(function () {
+        btn.textContent = "Copied!";
+        setTimeout(function () { btn.textContent = "Copy"; }, 1800);
+      });
+    });
+  });
+
   document.getElementById("year").textContent = new Date().getFullYear();
 })();
